@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The GC Soundboard</title>
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!--MOBILE-->
+    <section id="mobile">
+        <header>
+            <h1>The Gemma Collins Soundoard</h1>
+        </header>
+        <div class="mobile-soundboard">
+            <div class="sound">
+                Sound Name
+            </div>
+            <div class="sound">
+                Sound Name
+            </div>
+     
+        </div>
+        <footer><p>Created by <a href="www.larlar.co.uk">Larlar</a></p></footer>
+    </section>
+
+      <!--DESKTOP-->
+      <section id="desktop">
+          <div id="left">
+              <header>
+                  <h1>The Gemma Collins Soundboard</h1>
+                </header>
+                <div class="desktop-soundboard soundboard">
+                    <div  class="key" data-key="65">
+                        A
+                    </div>
+                    <div  class="key" data-key="83">
+                        S
+                    </div>
+                    <div  class="key" data-key="68">
+                        D
+                    </div>  
+                    <div  class="key" data-key="70">
+                        F
+                    </div>  
+                    <div  class="key" data-key="71">
+                        G
+                    </div>  
+                    <div  class="key" data-key="72">
+                        H
+                    </div>  
+                    <div  class="key" data-key="74">
+                        J
+                    </div>  
+                    <div  class="key" data-key="75">
+                        K
+                    </div>  
+                    <div  class="key" data-key="76">
+                        L
+                    </div>            
+                </div>
+                <footer><p>Created by <a href="www.larlar.co.uk">Larlar</a></p></footer>
+            </div>
+          <div id="right"></div>
+      
+       
+    </section>
+
+    <audio data-key="65" src="sounds/darren.wav"></audio>
+    <audio data-key="83" src="sounds/true.wav"></audio>
+    <audio data-key="68" src="sounds/devo.wav"></audio>
+    <audio data-key="70" src="sounds/electric.wav"></audio>
+    <audio data-key="71" src="sounds/fire-exit.wav"></audio>
+    <audio data-key="72" src="sounds/frazzled.wav"></audio>
+    <audio data-key="74" src="sounds/games.wav"></audio>
+    <audio data-key="75" src="sounds/money.wav"></audio>
+    <audio data-key="76" src="sounds/piss.wav"></audio>
+
+
+    <!--Scripts-->
+    <script>
+   
+        function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        if(!audio) return; //stop the function from running
+        audio.currentTime = 0; //Rewind to start
+        audio.play();
+        key.classList.add('playing');
+        }
+
+           function removeTransition(e) {
+               if(e.propertyName !== 'transform') return; //Skip it if its not a transform
+               this.classList.remove('playing');
+           }
+
+           const keys = document.querySelectorAll('.key');
+           keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+           window.addEventListener('keydown', playSound);
+    </script>
+
+
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
