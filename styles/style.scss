@@ -4,6 +4,9 @@ $grey: #393d3f;
 $mint: #9cc4b2;
 $beige: #d3bbb9;
 
+/*Font*/
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+
 html {
   width: 100vw;
   height: 100vh;
@@ -13,7 +16,7 @@ html {
     height: 100vh;
     margin: 0 auto;
     font-family: "Work Sans", sans-serif;
-    font-size: 12px !important;
+    font-size: 13px !important;
     color: $grey;
 
     #mobile {
@@ -33,7 +36,7 @@ html {
           padding: 15px 15px 0 15px;
 
           h1 {
-            font-size: 3.5em;
+            font-size: 2rem;
             font-weight: 700;
             text-transform: uppercase;
             margin: 10px 10px 10px 25px;
@@ -72,11 +75,16 @@ html {
               text-transform: uppercase;
               font-weight: 700;
               margin-bottom: 0px;
+
+              &:hover {
+                background-color: $mint;
+              }
             }
 
             p {
               margin: 15px 0 0 0;
               padding: 0 5px;
+              font-weight: 500;
             }
           }
 
