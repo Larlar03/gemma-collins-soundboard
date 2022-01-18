@@ -16,7 +16,7 @@ html {
     height: 100vh;
     margin: 0 auto;
     font-family: "Work Sans", sans-serif;
-    font-size: 13px !important;
+    font-size: 14px !important;
     color: $grey;
 
     main {
@@ -43,6 +43,11 @@ html {
           }
           p {
             margin-left: 25px;
+          }
+
+          .warning {
+            font-weight: 500;
+            font-size: 0.75rem;
           }
 
           .name {
