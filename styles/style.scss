@@ -19,114 +19,119 @@ html {
     font-size: 13px !important;
     color: $grey;
 
-    #mobile {
-      display: none;
-    }
-
     main {
       width: 100%;
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
+      align-items: center;
 
-      #left {
-        width: 40%;
-        height: 100%;
+      header {
+        max-width: 520px;
+        padding: 15px 15px 0 15px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
 
-        header {
-          padding: 15px 15px 0 15px;
-
+        .header-text {
+          width: 50%;
           h1 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             text-transform: uppercase;
             margin: 10px 10px 10px 25px;
           }
-
           p {
             margin-left: 25px;
           }
+
+          .name {
+            color: #d4b3ff;
+          }
         }
 
-        .soundboard {
-          width: 100%;
-          height: auto;
-          margin: 0 auto;
-          padding: 30px 0;
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: center;
-          align-content: center;
-
-          .key {
-            width: 130px;
-            height: 90px;
-            margin: 15px 10px;
-            box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            transition: all 1s;
-            text-align: center;
-            cursor: pointer;
-
-            h2 {
-              background-color: $lavender;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-              color: #ffffff;
-              text-transform: uppercase;
-              font-weight: 700;
-              margin-bottom: 0px;
-
-              &:hover {
-                background-color: $mint;
-              }
-            }
-
-            p {
-              margin: 15px 0 0 0;
-              padding: 0 5px;
-              font-weight: 500;
-            }
+        .header-img {
+          width: 50%;
+          margin-left: 10px;
+          padding-left: 10px;
+          img {
+            max-width: 100%;
+            border-radius: 100%;
           }
+        }
+      }
 
-          .playing {
-            transform: scale(1.1);
+      .soundboard {
+        max-width: 520px;
+        height: auto;
+        margin: 0 auto;
+        padding: 30px 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
 
-            h2 {
+        .key {
+          width: 130px;
+          height: 90px;
+          margin: 15px 10px;
+          box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          transition: all 1s;
+          text-align: center;
+          cursor: pointer;
+
+          h2 {
+            background-color: $lavender;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0px;
+
+            &:hover {
               background-color: $mint;
             }
           }
-        }
-
-        footer {
-          width: 40%;
-          margin: 0 auto;
 
           p {
-            text-align: center;
-            color: $grey;
+            margin: 15px 0 0 0;
+            padding: 0 5px;
+            font-weight: 500;
+          }
+        }
 
-            a {
-              color: $mint;
+        .playing {
+          transform: scale(1.1);
 
-              &:hover {
-                color: $beige;
-                text-decoration: none;
-              }
-            }
+          h2 {
+            background-color: $mint;
           }
         }
       }
 
-      #right {
-        width: 60%;
-        height: 100vh;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        background-image: url(../img/gc_background.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+      footer {
+        width: 40%;
+        margin: 0 auto;
+
+        p {
+          text-align: center;
+          color: $grey;
+
+          a {
+            color: $mint;
+
+            &:hover {
+              color: $beige;
+              text-decoration: none;
+            }
+          }
+        }
       }
     }
   }
+}
+
+@media (min-width: 1001px) {
 }
