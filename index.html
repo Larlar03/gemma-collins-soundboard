@@ -1,81 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>The GC Soundboard</title>
 
     <!--Stylesheet-->
     <link rel="stylesheet" href="styles/style.css" />
 
     <!--Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!--Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
 
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <div id="left">
-            <header>
-                <h1>The Gemma Collins Soundboard</h1>
-                <p>Press the letter on your keyboard to hear a GC quote.</p>
-            </header>
+      <div id="left">
+        <header>
+          <h1>The Gemma Collins Soundboard</h1>
+          <p>Press the letter on your keyboard to hear a GC quote.</p>
+        </header>
 
-            <!--Soundboard begins-->
-            <div class="soundboard">
-                <div class="key" data-key="65">
-                    <h2>A</h2>
-                    <p>Claustrophobic</p>
-                </div>
-                <div class="key" data-key="83">
-                    <h2>S</h2>
-                    <p>Not True</p>
-                </div>
-                <div class="key" data-key="68">
-                    <h2>D</h2>
-                    <p>Devo'd</p>
-                </div>
-                <div class="key" data-key="70">
-                    <h2>F</h2>
-                    <p>Electric</p>
-                </div>
-                <div class="key" data-key="71">
-                    <h2>G</h2>
-                    <p>Fire Exit</p>
-                </div>
-                <div class="key" data-key="72">
-                    <h2>H</h2>
-                    <p>Frazzled</p>
-                </div>
-                <div class="key" data-key="74">
-                    <h2>J</h2>
-                    <p>Gamed Out</p>
-                </div>
-                <div class="key" data-key="75">
-                    <h2>K</h2>
-                    <p>I've Got Money</p>
-                </div>
-                <div class="key" data-key="76">
-                    <h2>L</h2>
-                    <p>Piss-Take</p>
-                </div>
-            </div>
-            <!--Soundboard ends-->
-
-            <footer>
-                <p>Created by <a href="https://github.com/Larlar03/gc-soundboard" target="_blank">Lana Gordon</a></p>
-            </footer>
+        <!--Soundboard begins-->
+        <div class="soundboard">
+          <div class="key button" data-key="65">
+            <h2>A</h2>
+            <p>Claustrophobic</p>
+          </div>
+          <div class="key" data-key="83">
+            <h2>S</h2>
+            <p>Not True</p>
+          </div>
+          <div class="key" data-key="68">
+            <h2>D</h2>
+            <p>Devo'd</p>
+          </div>
+          <div class="key" data-key="70">
+            <h2>F</h2>
+            <p>Electric</p>
+          </div>
+          <div class="key" data-key="71">
+            <h2>G</h2>
+            <p>Fire Exit</p>
+          </div>
+          <div class="key" data-key="72">
+            <h2>H</h2>
+            <p>Frazzled</p>
+          </div>
+          <div class="key" data-key="74">
+            <h2>J</h2>
+            <p>Gamed Out</p>
+          </div>
+          <div class="key" data-key="75">
+            <h2>K</h2>
+            <p>I've Got Money</p>
+          </div>
+          <div class="key" data-key="76">
+            <h2>L</h2>
+            <p>Piss-Take</p>
+          </div>
         </div>
-        <!--Background image div-->
-        <div id="right"></div>
+        <!--Soundboard ends-->
+
+        <footer>
+          <p>
+            Created by
+            <a href="https://github.com/Larlar03/gc-soundboard" target="_blank"
+              >Lana Gordon</a
+            >
+          </p>
+        </footer>
+      </div>
+      <!--Background image div-->
+      <div id="right"></div>
     </main>
 
     <!--Audio with keyboard data and sound clips assigned -->
@@ -89,40 +103,24 @@
     <audio data-key="75" src="sounds/money.wav"></audio>
     <audio data-key="76" src="sounds/piss.wav"></audio>
 
+    <!--Bootstrap JS-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
 
     <!--Scripts-->
-    <script>
-        function playSound(e) {
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-            if (!audio) return; //stop the function from running
-            audio.currentTime = 0; //Rewind to start
-            audio.play();
-            key.classList.add('playing');
-        }
-
-        function removeTransition(e) {
-            if (e.propertyName !== 'transform') return; //Skip it if its not a transform property
-            this.classList.remove('playing');
-        }
-
-        const keys = document.querySelectorAll('.key');
-        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-
-        window.addEventListener('keydown', playSound);
-    </script>
-
-
-    <!--Bootstrap JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-    </script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
