@@ -4,4 +4,4 @@ A JavaScript soundboard with Gemma Collins quotes. An audio of Gemma Collins pla
 
 ## Link
 
-https://gc-soundboard.netlify.app
+https://gemma-collins-soundboard.vercel.app
